@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+	<!-- Account -->
+        
+	<definition name="anonymousBaseTemplate" template="/WEB-INF/views/layout.jsp">
+		<put-attribute name="title" value=""/>
+		<put-attribute name="header" value="/WEB-INF/views/header.jsp"/>
+                <put-attribute name="menu" value=""/>
+		<put-attribute name="body" value=""/>
+                <put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
+	</definition>
+	
+	<definition name="login" extends="anonymousBaseTemplate">
+		<put-attribute name="title" value="Вход"/>
+		<put-attribute name="body" value="/WEB-INF/views/account/login.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="registerNewUser" extends="anonymousBaseTemplate">
+		<put-attribute name="title" value="Регистрация"/>
+		<put-attribute name="body" value="/WEB-INF/views/account/registration.jsp"/>
+	</definition>
+	
+	<definition name="registrationCompleted" extends="anonymousBaseTemplate">
+		<put-attribute name="title" value="Спасибо"/>
+		<put-attribute name="body" value="/WEB-INF/views/account/thanks.jsp"/>
+	</definition>
+        
+	<definition name="welcome" extends="anonymousBaseTemplate">
+		<put-attribute name="title" value="Добро пожаловать" />
+		<put-attribute name="body" value="/WEB-INF/views/welcome.jsp" />
+	</definition>                        
+	
+	<definition name="account/resendPassword" extends="anonymousBaseTemplate">
+		<put-attribute name="title" value="Spitter | Reminder"/>
+		<put-attribute name="body" value="/WEB-INF/views/account/resend_password.jsp"/>
+	</definition>
+	
+	<definition name="account/confirmation" extends="anonymousBaseTemplate">
+		<put-attribute name="title" value="Spitter"/>
+		<put-attribute name="body" value="/WEB-INF/views/account/confirmation.jsp"/>
+	</definition>
+	
+	<!-- User -->
+	
+	<definition name="baseTemplate" template="/WEB-INF/views/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />		
+	</definition>
+        
+	<definition name="logged/home" extends="baseTemplate">
+		<put-attribute name="title" value="Добро пожаловать" />
+		<put-attribute name="body" value="/WEB-INF/views/users/home.jsp" />
+	</definition>
+        
+	<definition name="logged/edit" extends="baseTemplate">
+		<put-attribute name="title" value="Редактирование профиля" />
+		<put-attribute name="body" value="/WEB-INF/views/users/editProfile.jsp"/>
+	</definition>        
+        
+        <definition name="users/search" extends="baseTemplate">
+		<put-attribute name="title" value="Результаты поиска" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/users/search.jsp" />
+	</definition>
+        
+        <definition name="users/view" extends="baseTemplate">
+		<put-attribute name="title" value="Просмотр пользователя" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/users/view.jsp" />
+	</definition>
+        
+        <!-- Booking -->        
+        
+	<definition name="booking/new" extends="baseTemplate">
+		<put-attribute name="title" value="Запись на приём" />
+		<put-attribute name="body" value="/WEB-INF/views/booking/new.jsp" />
+	</definition>
+        
+	<definition name="booking/success" extends="baseTemplate">
+		<put-attribute name="title" value="Вы записались" />
+		<put-attribute name="body" value="/WEB-INF/views/booking/success.jsp" />
+	</definition>                        
+
+	<definition name="booking/list" extends="baseTemplate">
+		<put-attribute name="title" value="Записи на приём"/>
+		<put-attribute name="body" value="/WEB-INF/views/booking/list.jsp"/>
+	</definition>
+	
+	<!-- Admin stuff -->
+	
+	<!--<definition name="adminBaseTemplate" template="/WEB-INF/views/admin/layout.jsp">
+		<put-attribute name="title" value=""/>
+		<put-attribute name="header" value="/WEB-INF/views/admin/header.jsp"/>
+		<put-attribute name="body" value=""/>
+	</definition>
+	
+	<definition name="admin/main" extends="adminBaseTemplate">
+		<put-attribute name="title" value="Spitter | Administrator panel" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/main.jsp" />
+	</definition>
+	
+	<definition name="admin/users" extends="adminBaseTemplate">
+		<put-attribute name="title" value="Spitter | Administrator panel | Users" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/users.jsp" />
+	</definition>
+	
+	<definition name="admin/search" extends="adminBaseTemplate">
+		<put-attribute name="title" value="Spitter | Administrator panel | Search for users" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/search.jsp" />
+	</definition>-->
+	
+</tiles-definitions>
