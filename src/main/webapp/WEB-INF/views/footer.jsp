@@ -13,6 +13,5 @@
             </div>
 	</td></tr>
     </table>
-    <script src="<spring:url value="/resources/js/bootstrap.js"/>" /></script>                        
 </div>
  
